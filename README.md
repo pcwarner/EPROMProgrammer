@@ -1,3 +1,5 @@
+EPROMProgrammer
+
 This branch contains the designs for two EPROM programmers.
 
 Both programmers use an Arduino Nano as the controller. The PCBs were designed using DIP trace.
