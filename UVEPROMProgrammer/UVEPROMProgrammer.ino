@@ -144,9 +144,9 @@ void setAddress(long address) {
   address = address & 0x0000ffff;
   byte low = address % 0x0100;
   byte high = (address - low) / 0x0100;
+  digitalWrite(SHIFT_ENABLE, LOW);
   shiftOut(SHIFT_DATA, SHIFT_CLK, MSBFIRST, high);
   shiftOut(SHIFT_DATA, SHIFT_CLK, MSBFIRST, low);
-  digitalWrite(SHIFT_ENABLE, LOW);
   digitalWrite(SHIFT_ENABLE, HIGH);
   return;
 }
@@ -164,18 +164,11 @@ void setDataDirection(int direction) {
 
 void setDataByte(int value) {
   value = value & 0x000000ff;
-  // Serial.println("");
-  // Serial.println(value, HEX);
   for (int i = 0; i < 8; i++) {
-    // Serial.print("pin=");
-    // Serial.print(DATA_PIN_ARRAY[i]);
-    // Serial.print(" set to ");
     if ((value & DATA_MASK_ARRAY[i]) == 0) {
       digitalWrite(DATA_PIN_ARRAY[i], LOW);
-      // Serial.println(LOW);
     } else {
       digitalWrite(DATA_PIN_ARRAY[i], HIGH);
-      // Serial.println(HIGH);
     }
   }
   return;
@@ -184,10 +177,6 @@ void setDataByte(int value) {
 int getDataByte() {
   int value = 0;
   for (int i = 0; i < 8; i++) {
-    // Serial.print("pin=");
-    // Serial.print(DATA_PIN_ARRAY[i]);
-    // Serial.print(" is ");
-    // Serial.println(digitalRead(DATA_PIN_ARRAY[i]));
     value += (digitalRead(DATA_PIN_ARRAY[i]) * DATA_MASK_ARRAY[i]);
   }
   return value;

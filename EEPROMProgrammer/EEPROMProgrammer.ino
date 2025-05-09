@@ -209,9 +209,9 @@ void setAddress(long address) {
   newAddress = newAddress & 0x0000ffff;
   byte low = newAddress % 0x0100;
   byte high = (newAddress - low) / 0x0100;
+  digitalWrite(SHIFT_ENABLE, LOW);
   shiftOut(SHIFT_DATA, SHIFT_CLK, MSBFIRST, high);
   shiftOut(SHIFT_DATA, SHIFT_CLK, MSBFIRST, low);
-  digitalWrite(SHIFT_ENABLE, LOW);
   digitalWrite(SHIFT_ENABLE, HIGH);
   return;
 }
