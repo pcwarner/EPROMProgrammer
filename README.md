@@ -45,16 +45,17 @@ E,<ALL or address> - returns G**
 The flash EEPROMs can not be updated byte at a time, they must be erased first and then written it. This command accepts the "ALL" parameter to erase the whole EEPROM or an address to erase that sector. This command only works on flash EEPROMs.
 
 **B - Batch
-B,<option>{,<data>} - returns G{,<data>}
+B,<option>{,<data>} - returns G{,<data>}**
 At present the only options supported are "1" to switch the UVEPROM programming voltage on and "0" to switch it off. This works with UVEPROMs only. Other options are planned in the future.
 
-**T - Test - T,<option> - returns G
+**T - Test
+T,<option> - returns G**
 The command permitts a number of test functions. "0" - Switches the programming voltage off. "1" switches the programming voltage on, which can be used to set the voltage level. "2" - Put a high to all the data lines in turn, which could be used to light as set of LEDs. "3" - Put a high to the address levels in turn. "4" - Flashes the CE# line, "5" - Flashes the OE# line and "6" flashes the WE# line. Not all EPROMs support all features.
 
 **H - Help
 H - returns <Help Message>**
 This command displays the help message including the supported EPROM types.
 
-** TODO **
+**TODO**
 1. Some EEPROMs support a "feed-back" method which lets the programmer know when the write has finished. This is not used and at present the firmware performs a delay that this the maximum length that the EEPROM is likely to need. This is clearly a slower and could be improved upon.
 2. The UVPROM program has pins added that can be connected to a breadboard to support other UVEPROMs, however the firmware has not been updated to support any such additional UVEPROMs.
