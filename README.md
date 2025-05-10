@@ -90,5 +90,6 @@ This command displays the help message including a list of the supported EPROM t
 
 # TODO
 
-1. Some EEPROMs support a "feed-back" method which lets the programmer know when the write has finished. At present this feature is not used and the firmware simply performs a delay that this the maximum length that the EEPROM is likely to need. This is clearly a slower method and could be improved upon.
-2. The UVPROM programmer has pins added that can be connected to a breadboard in order to support other UVEPROMs, however at present the firmware has not been updated to support any such additional UVEPROMs.
+1. Some EEPROMs support a "feed-back" method which lets the programmer know when the write has finished. At present this feature is not used and the firmware simply performs a delay which is likely to be greater than the maximum the EEPROM  will need. This is clearly a slower method and could be improved upon.
+2. The UVEPROM programmer has pins added that can be connected to a breadboard in order to support other UVEPROMs, however at present the firmware has not been updated to support any such additional UVEPROMs.
+3. In a similar way the EEPROM programmer at present doesn't have such pins and it would be useful to add these.
