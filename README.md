@@ -53,6 +53,7 @@ Gets the type of EEPROM being used or returns an error if the type has not been 
 ## P - Protect
 
 **P,\<1 or 0\> - returns G**
+
 Set or unsets write protection on some EEPROMs. "1" set the protection and "0" removes it. For example 28C256 and 28C512 support this feature that protects against accidentially  changing the contents. This command is not present on the UVEPROM programmer as such EPROM require a programming voltage to be changed. 
 
 ## E - Erase
