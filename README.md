@@ -93,19 +93,19 @@ This command displays the help message including a list of the supported EPROM t
 
 Also included with this project is a controlling program that is written in Python. It uses a command line interface. 
 
-## Read
+## READ
 
 **python programmer READ \<Serial Port\> \<EPROM Type\> \<File Name{.hex}\>**
 
 The READ command reads EPROM and writes it to a file. The file should have the suffix of ".hex". The "Serial Port" parameter should be the port the programmer is connected to. For example: "COM6". The EPROM type should be a valid EPROM type code that the programmer supports. And the file name should be a valid file that does not exist. The resulting file will been the size about six times the size of the EPROM being read and contains one line per byte with the value in hexadecimal. 
 
-## Write
+## WRITE
 
 **python programmer WRITE \<Serial Port\> \<EPROM Type\> \<File Name{.hex}\>**
 
 The write command takes the contents of a hexadecimal file and write it to the EPROM. If the file is smaller than the size the EPROM can take then only the first part of the EPROM is used. If the file is larger than the EPROM then an error will be reported.
 
-## Verify
+## VERIFY
 
 **python programmer VERIFY \<Serial Port\> \<EPROM Type\> \<File Name{.hex}\>**
 
