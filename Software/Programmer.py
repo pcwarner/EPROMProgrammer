@@ -136,7 +136,7 @@ def read(epromType, port, fileName):
   j = 0
   for i in range(0, epromSize):
     if (i % HASH_DISPLAY) == 0:
-      print("#", end="")
+      print("#", end="", flush=True)
       j = j + 1
       if j >= EOL_DISPLAY:
         print("")
@@ -163,7 +163,7 @@ def write(epromType, port, fileName):
   j = 0
   for i in range(0, dataSize):
     if (i % HASH_DISPLAY) == 0:
-      print("#", end="")
+      print("#", end="", flush=True)
       j = j + 1
       if j >= EOL_DISPLAY:
         print("")
@@ -187,7 +187,7 @@ def verify(epromType, port, fileName):
   j = 0
   for i in range(0, dataSize):
     if (i % HASH_DISPLAY) == 0:
-      print("#", end="")
+      print("#", end="", flush=True)
       j = j + 1
       if j >= EOL_DISPLAY:
         print("")
@@ -213,7 +213,7 @@ def fill(epromType, port, fileName):
   j = 0
   for i in range(0, epromSize):
     if (i % HASH_DISPLAY) == 0:
-      print("#", end="")
+      print("#", end="", flush=True)
       j = j + 1
       if j >= EOL_DISPLAY:
         print("")

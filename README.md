@@ -95,43 +95,43 @@ Also included with this project is a controlling program that is written in Pyth
 
 ## READ
 
-**python programmer READ \<Serial Port\> \<EPROM Type\> \<File Name{.hex}\>**
+**python programmer \<EPROM Type\> \<Serial Port\> READ \<File Name{.hex}\>**
 
 The READ command reads EPROM and writes it to a file. The file should have the suffix of ".hex". The "Serial Port" parameter should be the port the programmer is connected to. For example: "COM6". The EPROM type should be a valid EPROM type code that the programmer supports. And the file name should be a valid file that does not exist. The resulting file will been the size about six times the size of the EPROM being read and contains one line per byte with the value in hexadecimal. 
 
 ## WRITE
 
-**python programmer WRITE \<Serial Port\> \<EPROM Type\> \<File Name{.hex}\>**
+**python programmer \<EPROM Type\> \<Serial Port\> WRITE \<File Name{.hex}\>**
 
 The write command takes the contents of a hexadecimal file and write it to the EPROM. If the file is smaller than the size the EPROM can take then only the first part of the EPROM is used. If the file is larger than the EPROM then an error will be reported.
 
 ## VERIFY
 
-**python programmer VERIFY \<Serial Port\> \<EPROM Type\> \<File Name{.hex}\>**
+**python programmer \<EPROM Type\> \<Serial Port\> VERIFY \<File Name{.hex}\>**
 
 The verify command read the contents of the EPROM and compares the data to that in the EPROM, reporting any errors.
 
 ## READBYTE
 
-**python programmer READBYTE \<Serial Port\> \<EPROM Type\> \<Address\>**
+**python programmer \<EPROM Type\> \<Serial Port\> READBYTE \<Address\>**
 
 This command reads a byte from the EPROM and displays it.
 
 ## READBYTE
 
-**python programmer WRITEBYTE \<Serial Port\> \<EPROM Type\> \<Address\> \<Data\>**
+**python programmer \<EPROM Type\> \<Serial Port\> WRITEBYTE \<Address\> \<Data\>**
 
 This command writes a single byte to the EPROM. Not really that useful, but is included to be complete.
 
 ## PROTECT
 
-**python programmer PROTECT \<Serial Port\> \<EPROM Type\> \<1 or 0\>**
+**python programmer \<EPROM Type\> \<Serial Port\> PROTECT \<1 or 0\>**
 
 Switches the protection mode on or off. This command requires that the EPROM supports the function. If it doesn't then a error will be reported.
 
 ## FILL
 
-**python programmer FILL \<Serial Port\> \<EPROM Type\> \<File Name{.hex}\>**
+**python programmer \<EPROM Type\> \<Serial Port\> FILL \<File Name{.hex}\>**
 
 Fills the EPROM with randon data and alo writes the data to a file. This command was really only added so I could test the programmers, however it has been left in as it could be used to security wipe an EPROM. Writing zeros to the EEPROM, does always clear the contents, whereas performing a few fills is more secure. 
  
