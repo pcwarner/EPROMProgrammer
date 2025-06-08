@@ -12,7 +12,7 @@ The PCB where created using the free version of DipTrace, which is available at:
 
 There firmware on the Arduino Nanos was created using the Arduino IDE, which can be downloaded at: https://www.arduino.cc/en/software/.
 
-The controlling software that run on the PC is written in Python and should work under most implementations of this language. I use Visual Studio Code and installed Phython using that IDE.
+The controlling software that run on the PC is written in Python and should work under most implementations of this language. I use Visual Studio Code and installed Phython using that IDE. A demo of this controlling interface software can be found at: https://youtu.be/y0jgUbPOYNE
 
 # Firmware Interface
 
