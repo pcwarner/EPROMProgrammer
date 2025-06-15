@@ -8,7 +8,7 @@ The first programmer works with the 27C16 and 27C256 UV light erasable EPROMs. T
 
 The second programmer works with the 28C16, 28C64, 28C256, 28C512, SST39SF010, SST39SF020 and the SST39SF040. These are Electricly Erasable PROMs. The power for this progammer is obtained from the Arduino through the USB and no external PSU is required. The YouTube video this device is: https://youtu.be/WWmPPYQPKCU?si=6Kh_ERBs9z3F51hZ
 
-The PCB where created using the free version of DipTrace, which is available at: https://diptrace.com/download/download-diptrace/. The free version limits you to 300 pins and two layers, which is fine for the PCBs in this project. There are also other limitation for free version please seen their license for full details.
+The PCB where created using the free version of DipTrace, which is available at: https://diptrace.com/download/download-diptrace/. The free version limits you to 300 pins and two layers, which is fine for the PCBs in this project. There are also other limitations on the free version, please seen their license for full details.
 
 There firmware on the Arduino Nanos was created using the Arduino IDE, which can be downloaded at: https://www.arduino.cc/en/software/.
 
